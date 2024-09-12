@@ -1,19 +1,53 @@
-<footer class="my-20">
-  <p class="text-center text-sm text-slate-500">
-    Copyright © {new Date().getFullYear()} Astroship. All rights reserved.
-  </p>
-  <!--
-    Can we ask you a favor 🙏
-    Please keep this backlink on your website if possible.
-    or Purchase a commercial license from https://web3templates.com
-  -->
-  <p class="text-center text-xs text-slate-500 mt-1">
-    Made by <a
-      href="https://web3templates.com"
+---
+import Picture from "astro/components/Picture.astro";
+import LogoFooter from "assets/LogoFooter.png";
+import { Icon } from "astro-icon/components";
+
+---
+<footer class="mt-20 bg-custom-footer">
+  <div class="grid p-6 sm:grid-cols-3 md:grid-cols-3 mt-16 gap-16">
+    <div class="flex-1 mb-4 sm:mb-0">
+      <Picture
+          src={LogoFooter}
+          alt="Logo de Lic. en Nutrición Ana Agustina Martinelli"
+          widths={[200, 400, 600]}
+          sizes="(max-width: 800px) 100vw, 620px"
+          loading="eager"
+          format="avif"
+        />
+    </div>
+
+    <div class="flex-2 mb-4 sm:mb-0">
+      <h2 class="text-xl font-bold">Lic. en Nutrición Ana Agustina Martinelli</h2>
+      <p>Te ayudo en tu alimentación y adquirir hábitos que duren toda la vida. Alimentación sana y equilibrada para mejorar tu calidad de vida.</p>
+    </div>
+  
+    <!-- Contact Information Section -->
+    <div class="flex-3 mb-4 sm:mb-0">
+      <ul class="list-none p-0">
+        <li>
+          <b>Tel:</b> +54 2284 307606
+        </li>
+        <li>
+          <b>Email:</b> anaagustina@gmail.com
+        </li>
+        <li>
+          <b>Dirección:</b> General Paz 3150
+        </li>
+      </ul>
+    </div>
+  </div>
+ 
+
+  <div class="bg-pink-300 p-4">
+    <p class="text-center text-pink-800 text-sm">
+      Copyright © {new Date().getFullYear()} Hecho por <a
+      href="https://www.instagram.com/oliviatodesco/"
       target="_blank"
       rel="noopener"
       class="hover:underline">
-      Web3Templates
+      Ana Olivia Todesco
     </a>
-  </p>
+    </p>
+  </div>
 </footer>
