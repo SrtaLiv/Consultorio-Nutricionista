@@ -15,6 +15,7 @@ module.exports = {
       },
       colors: {
         'custom-footer': 'rgba(246, 240, 237, 1)',
+        'soft': 'rgba(250, 229, 227, 1)'
       },
     },
   },

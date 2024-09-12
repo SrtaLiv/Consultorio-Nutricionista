@@ -1,0 +1,32 @@
+---
+import { Picture } from "astro:assets";
+import sobreMi from "assets/sobremi.png";
+import Link from "@components/ui/link.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<main
+  class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
+
+  <div>
+    <h1
+      class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
+      Sobre mi
+    </h1>
+    <p class="text-lg mt-4 text-slate-600 max-w-xl">
+        Soy Ana Agustina Martinelli, Nutricionista con pasión por la salud y el bienestar. Graduada en 2013 de la Universidad de Belgrano, he dedicado mi carrera a la nutrición, trabajando tanto en el ámbito privado como en hospitales.
+        <br><br>
+        <wbr /> Cada día, busco ser una guía para aquellos que desean mejorar su bienestar a través de la nutrición. La alimentación es una parte fundamental de nuestra vida, y estoy comprometida a ser una aliada en el camino hacia una salud óptima.
+    </p>
+  </div>
+  <div class="py-6 md:order-1 md:block">
+    <Picture
+      src={sobreMi}
+      alt="Astronaut in the air"
+      widths={[200, 400, 600]}
+      sizes="(max-width: 800px) 100vw, 620px"
+      loading="eager"
+      format="avif"
+    />
+  </div>
+</main>
