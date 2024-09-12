@@ -1,9 +1,13 @@
 ---
 import { Picture } from "astro:assets";
+
+import { Image } from 'astro:assets';
+import myImage from '../assets/consultorio.png.png'; 
+
 import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
-import consultorio from "../assets/consultorio.png";
+// import consultorio from "../assets/consultorio.png";
 
 ---
 
@@ -17,7 +21,7 @@ import consultorio from "../assets/consultorio.png";
       <div class="flex flex-col md:flex-row py-6">
         <div class="md:w-1/2 mb-6 md:mb-0 md:mr-6">
           <Picture
-          src={consultorio}
+          src={myImage}
           alt="Consultorio"
           widths={[200, 400, 600]}
           sizes="(max-width: 800px) 100vw, 620px"
