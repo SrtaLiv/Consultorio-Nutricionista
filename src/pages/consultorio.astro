@@ -1,0 +1,35 @@
+---
+import { getCollection } from "astro:content";
+import { Picture } from "astro:assets";
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import consultorioImage from "assets/consultorio.png";
+
+// Filter team entries with 'draft: false' & date before current date
+const publishedTeamMembers = await getCollection("team", ({ data }) => {
+  return !data.draft && data.publishDate < new Date();
+});
+---
+
+<Layout title="Consultorio">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Consultorio</Fragment>
+      <Fragment slot="desc">Olavarria, General Paz 3150.</Fragment>
+    </Sectionhead>
+    <div>
+      
+    <div class="py-6 md:block">
+      
+      <Picture
+      src={consultorioImage}
+      alt="Astronaut in the air"
+      widths={[200, 400, 600]}
+      sizes="(max-width: 800px) 100vw, 620px"
+      loading="eager"
+      format="avif"/>
+    
+    </div>
+  </Container>
+</Layout>
