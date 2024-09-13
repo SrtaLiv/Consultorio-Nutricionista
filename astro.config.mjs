@@ -10,5 +10,10 @@ import vercel from '@astrojs/vercel/serverless';
 export default defineConfig({
   integrations: [tailwind(), mdx(), icon()],
   output: 'server',
-  adapter: vercel(),
+  adapter: vercel({
+    imageService: true,
+    imagesConfig: {
+      sizes: [320, 640, 1280],
+    }, 
+  }),
 });

@@ -2,21 +2,30 @@
 import { Picture } from "astro:assets";
 import agusImage from "/public/assets/AGUS.png";
 import Link from "@components/ui/link.astro";
-
+import { Image } from "astro:assets";
+import agus from "../assets/AGUS.png";
 ---
 
 <main
   class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
   <div class="py-6 md:order-1 md:block">
-    <Picture
+    <!-- <Picture
       src={agusImage}
       alt="Astronaut in the air"
       widths={[200, 400, 600]}
       sizes="(max-width: 800px) 100vw, 620px"
       loading="eager"
       format="avif"
-    />
-    
+    /> -->
+    <Image src={agus} alt="My super logo!" />
+    <!-- <img
+      src="/_vercel/image?url=_astro/logo.hash.png&w=...&q=..."
+      alt="Mi super logo!"
+      loading="lazy"
+      decoding="async"
+      width="..."
+      height="..."
+    /> -->
   </div>
   <div>
     <h1
@@ -35,14 +44,15 @@ import Link from "@components/ui/link.astro";
         rel="noopener">
         Contactame
 
-      <Link
-        size="lg"
-        style="outline"
-        rel="noopener"
-        href="/plan"
-        class="flex gap-1 items-center justify-center"
-        target="_blank">
-        Planes
+        <Link
+          size="lg"
+          style="outline"
+          rel="noopener"
+          href="/plan"
+          class="flex gap-1 items-center justify-center"
+          target="_blank">
+          Planes
+        </Link>
       </Link>
     </div>
   </div>
