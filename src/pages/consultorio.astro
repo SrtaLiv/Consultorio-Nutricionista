@@ -4,7 +4,6 @@ import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
 import consultorio from "/assets/consultorio.png";
-
 ---
 
 <Layout title="Consultorio">
@@ -16,25 +15,31 @@ import consultorio from "/assets/consultorio.png";
     <div>
       <div class="flex flex-col md:flex-row py-6">
         <div class="md:w-1/2 mb-6 md:mb-0 md:mr-6">
+          
           <Picture
-          src={consultorio}
-          alt="Consultorio"
-          widths={[200, 400, 600]}
-          sizes="(max-width: 800px) 100vw, 620px"
-          loading="eager"
-          format="avif"
-        />
+            src={import("~/assets/images/AGUS.png")}
+            class="object-cover w-full h-64 mb-6 rounded shadow-lg bg-gray-400 dark:bg-slate-700"
+            widths={[400]}
+            alt="Post 1 Image"
+          />
+          <!-- <Picture
+            src={consultorio}
+            alt="Consultorio"
+            widths={[200, 400, 600]}
+            sizes="(max-width: 800px) 100vw, 620px"
+            loading="eager"
+            format="avif"
+          /> -->
         </div>
-        
+
         <div class="md:w-1/2 md:ml-6">
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3190.7274935133064!2d-60.3229801234108!3d-36.896866882196264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959445ced08374b1%3A0x2e2912fe370e432c!2sGral.%20Paz%203150%2C%20B7400%20Olavarr%C3%ADa%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1sen!2sar!4v1726134448358!5m2!1sen!2sar" 
-            class="w-full h-64" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3190.7274935133064!2d-60.3229801234108!3d-36.896866882196264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959445ced08374b1%3A0x2e2912fe370e432c!2sGral.%20Paz%203150%2C%20B7400%20Olavarr%C3%ADa%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1sen!2sar!4v1726134448358!5m2!1sen!2sar"
+            class="w-full h-64"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
           <p>Olavarria, General Paz 3150.</p>
         </div>
       </div>
