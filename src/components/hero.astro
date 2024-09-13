@@ -17,15 +17,45 @@ import agus from "../assets/AGUS.png";
       loading="eager"
       format="avif"
     /> -->
+
+    <svg
+      width="120"
+      height="100"
+      viewBox="0 0 120 100"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <g id="starts">
+        <g id="ligthGroup">
+          <path
+            id="light1"
+            opacity="0.7"
+            d="M27.3586 19L33.501 37.3792H53.3782L37.2972 48.7382L43.4396 67.1174L27.3586 55.7584L11.2776 67.1174L17.42 48.7382L1.33903 37.3792H21.2162L27.3586 19Z"
+            fill="#EAB1B4"></path>
+        </g>
+        <g id="darkGroup">
+          <path
+            id="dark1"
+            opacity="0.7"
+            d="M27.3586 19L33.501 37.3792H53.3782L37.2972 48.7382L43.4396 67.1174L27.3586 55.7584L11.2776 67.1174L17.42 48.7382L1.33903 37.3792H21.2162L27.3586 19Z"
+            fill="#635391"></path>
+          <path
+            id="dark2"
+            opacity="0.7"
+            d="M52.3586 19L58.501 37.3792H78.3782L62.2972 48.7382L68.4396 67.1174L52.3586 55.7584L36.2776 67.1174L42.42 48.7382L26.339 37.3792H46.2162L52.3586 19Z"
+            fill="#635391"></path>
+        </g>
+      </g>
+    </svg>
+
     <Image src={agus} alt="My super logo!" />
-    <!-- <img
+    <img
       src="/_vercel/image?url=_astro/logo.hash.png&w=...&q=..."
       alt="Mi super logo!"
       loading="lazy"
       decoding="async"
       width="..."
       height="..."
-    /> -->
+    />
   </div>
   <div>
     <h1
@@ -57,3 +87,40 @@ import agus from "../assets/AGUS.png";
     </div>
   </div>
 </main>
+
+<style>
+  :root{
+    --dark-color: #635390;
+    --light-color: #EAB1B4;
+  }
+  svg{
+    cursor: pointer;
+  }
+
+  #darkGroup {
+    fill: var(--dark-color);
+  }
+  #lightGroup {
+    fill: var(--light-color);
+  }
+
+  #dark1,
+  #light1,
+  #dark2 {
+    transition: all 1s ease;
+  }
+
+  #dark2{
+    transform: translateX(-100%);
+  }
+
+  svg:hover #light1 {
+    transform: translate(20%);
+  }
+  svg:hover #dark1 {
+    transform: translate(40%);
+  }
+  svg:hover #dark2 {
+    transform: translate(0%);
+  }
+</style>
